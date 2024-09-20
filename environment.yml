@@ -1,0 +1,18 @@
+name: sce
+channels:
+dependencies:
+  - python==3.10.6
+  - ipython
+  - pip
+  - pip:
+    - "--editable=git+https://github.com/evfro/polara.git@develop#egg=polara"
+    - torch
+    - numba
+    - numpy
+    - scipy
+    - matplotlib
+    - numexpr==2.8.4
+    - pandas
+    - tqdm
+    - clearml
+    - hydra-core

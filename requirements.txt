@@ -1,0 +1,10 @@
+matplotlib
+numexpr==2.8.4
+numba
+numpy
+pandas
+polara @ git+https://github.com/evfro/polara.git@develop
+torch
+tqdm
+clearml
+hydra-core

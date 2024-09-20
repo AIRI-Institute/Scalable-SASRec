@@ -1,0 +1,31 @@
+cuda_visible_devices: 0
+
+data_path: data/beer_advocate.csv # path to csv with structure as in after get_movielens_data(include_time=True)
+splitting: 'temporal'
+
+dataloader:
+  batch_size: 512
+  n_neg_samples: 0
+
+model: 'SASRec' # not used
+model_params:
+  fwd_type: 'sce' # DO NOT CHANGE
+  sampling: 'no_sampling' # DO NOT USE FOR CE AND RCE
+  
+  maxlen: 200
+  hidden_units: 64
+  num_blocks: 2
+  num_heads: 1
+  dropout_rate: 0.3
+  
+  n_buckets: 615
+  bucket_size_x: 615
+  bucket_size_y: 256
+  mix_x: True # mix states embs with random matrix
+
+trainer_params:
+  num_epochs: 300
+  patience: 10    # nmb of epoches to wait for improvement in validation metrics
+  skip_epochs: 1  # how often to check if validation metrics are improved
+  learning_rate: 0.001
+  seed: 37
