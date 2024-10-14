@@ -2,7 +2,7 @@
 
 Gleb Mezentsev*, Danil Gusak*, Ivan Oseledets, Evgeny Frolov
 
-[[`Paper`]] [[`BibTeX`](#citing-rece)]
+[[`Paper`](https://dl.acm.org/doi/abs/10.1145/3640457.3688140)] [[`BibTeX`](#citing-rece)]
 
 ![SCE scheme](assets/sce_scheme.jpg?raw=true)
 
@@ -83,6 +83,14 @@ To reproduce the results of these sections of the paper you should modify the mo
 
 Please use the following BibTeX entry:
 
-TBU
+```bibtex
+@inproceedings{mezentsev2024scalable,
+  title={Scalable Cross-Entropy Loss for Sequential Recommendations with Large Item Catalogs},
+  author={Mezentsev, Gleb and Gusak, Danil and Oseledets, Ivan and Frolov, Evgeny},
+  booktitle={Proceedings of the 18th ACM Conference on Recommender Systems},
+  pages={475--485},
+  year={2024}
+}
+```
 
 In case of archiving this repository, the mirror repository is located [here](https://github.com/Personalization-Technologies-Lab/Scalable-SASRec)
