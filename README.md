@@ -2,7 +2,9 @@
 
 Gleb Mezentsev*, Danil Gusak*, Ivan Oseledets, Evgeny Frolov
 
-[[`Paper`](https://dl.acm.org/doi/abs/10.1145/3640457.3688140)] [[`BibTeX`](#citing-rece)]
+In the case of archiving this repository, the mirror repository is located [here](https://github.com/Personalization-Technologies-Lab/Scalable-SASRec).
+
+[[`Paper`](https://arxiv.org/abs/2409.18721)] [[`BibTeX`](#citing-rece)]
 
 ![SCE scheme](assets/sce_scheme.jpg?raw=true)
 
@@ -44,7 +46,7 @@ For example, to reproduce the best results of the $CE$ model on the Yelp dataset
 ```bash
 python train.py --config-path=configs/temporal/yelp --config-name='ce' data_path=data/yelp.csv
 ```
-For the $SCE$ model there are both configs for the best NDCG@10 performance (sce_max_ndcg.yaml) and for the same performance as the second best model but with a reduced memory consumption (sce_same_ndcg.yaml).
+For the $SCE$ model, there are both configs for the best NDCG@10 performance (sce_max_ndcg.yaml) and for the same performance as the second-best model but with reduced memory consumption (sce_same_ndcg.yaml).
 
 To reproduce the result for non-optimal configurations (other points on the corresponding figure) and to reproduce more accurate results for optimal configurations (using several random seeds), you should perform the grid search on relevant hyperparameters for each model and modify the configs accordingly. The grid used is shown below:
 ```json
@@ -73,7 +75,7 @@ To reproduce the result for non-optimal configurations (other points on the corr
          "model_params.bucket_size_y": [64, 256, 512, 1024, 4096]},
 }
 ``` 
-The parameters of the underlying transformer are selected accoring to the original SASRec work, were the same in all the experiments (except the leave_one_out split experiments) and could be seen in any of the config files.
+The parameters of the underlying transformer are selected according to the original SASRec work. They were the same in all the experiments (except the leave_one_out split experiments) and could be seen in any of the config files.
 
 ### Dependence on SCE Hyperparameters & Influence of Mix Operation
 
@@ -92,5 +94,3 @@ Please use the following BibTeX entry:
   year={2024}
 }
 ```
-
-In case of archiving this repository, the mirror repository is located [here](https://github.com/Personalization-Technologies-Lab/Scalable-SASRec)
