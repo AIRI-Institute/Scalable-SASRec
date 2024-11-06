@@ -81,7 +81,7 @@ The parameters of the underlying transformer are selected according to the origi
 
 To reproduce the results of these sections of the paper you should modify the model_params.n_buckets, model_params.bucket_size_x and model_params.mix_x parameters of the sce configs accordingly and use the same parameter grid as mentioned above.
 
-## Citing RECE
+## Citing SCE
 
 Please use the following BibTeX entry:
 
